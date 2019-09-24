@@ -7,9 +7,11 @@
 <body>
 <script>
     function tryRemoveFromArray(arr, index) {
+        count=0;
         for (let i = 0; i < arr.length; i++) {
             if (index === arr[i]) {
-                arr.splice(i, 1);
+                count++;
+                arr.splice(i, count);
             }
         }
         return console.log(arr);
